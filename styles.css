@@ -1,0 +1,76 @@
+
+.container{
+    
+  perspective: 800px;
+  width: 700px;
+  height: 400px;
+  
+  /* Styling */  
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 4px;
+  
+  /* Center it */
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* Flip the card on hover */
+.container:hover .card-front,
+.card-back {
+  transform: rotateY(-180deg) translateZ(1px);
+}
+
+.card-front{
+  width: 100%;
+  height: 100%;
+  background-color: #588A7E;
+  border: 2px solid #588A7E ;
+}
+
+.name-info{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 75px;
+}
+
+.open-tag{
+  position: absolute;
+}
+
+.name{
+  position: absolute;
+  font-size: 45px;
+  padding:0 0 0 105px;
+  text-transform: uppercase;
+
+}
+
+.job-title{
+  position: absolute;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 145px;
+  margin-top: 90px;
+}
+
+.close-tag{
+  position: absolute;
+  margin-left: 400px;
+  align-items: end;
+}
+
+.qr-code{
+  padding: 10px 0 0 15px;
+}
+
+img{
+  height: 100px;
+}
