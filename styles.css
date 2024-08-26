@@ -18,17 +18,33 @@
 
 }
 
+ /* Card flipping effects */
+ .card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+ }
+
+
 /* Flip the card on hover */
 .container:hover .card-front,
 .card-back {
   transform: rotateY(-180deg) translateZ(1px);
 }
 
+/* Flip the card on hover */
+.container:hover .card,
+.front-back {
+  transform: rotateY(-180deg);
+}
+
 .card-front{
-  width: 100%;
-  height: 100%;
   background-color: #588A7E;
   border: 2px solid #588A7E ;
+  
 }
 
 .name-info{
@@ -68,9 +84,77 @@
 }
 
 .qr-code{
+  width: 10%;
   padding: 10px 0 0 15px;
 }
 
 img{
   height: 100px;
+}
+
+.card-back{
+  background-color: #588A7E;
+  border: 2px solid #588A7E ;
+}
+
+.services{
+  width: 50%;
+  margin-left: 10px;
+  padding-top: 40px;
+
+}
+
+.serv-1{
+  display: flex;
+  width: 90%;
+  height: 100%;
+  justify-content: space-between;
+
+}
+
+
+.web img{
+  width: 80%;
+
+}
+.ecomm img{
+  width: 65%;
+}
+.serv-2{
+  display: flex;
+  width: 85%;
+  height: 50%;
+  justify-content: space-between;
+
+
+
+}
+.cms img{
+  width: 80%;
+}
+.security img{
+  width: 60%;
+}
+.vl {
+  border-left: 6px solid rgb(162, 177, 176);
+  opacity: 50%;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 25px;
+
+}
+.contact-info{
+  width: 50%;
+}
+
+
+/* Position the front and back side */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
